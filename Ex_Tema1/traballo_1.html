@@ -12,10 +12,78 @@ var capital=100;
 var ahorro =(100*0.02)*3; 
 console.log(ahorro);
 
-//exercicio 3 
+//exercicio 3 desconto 
+var compra=20; 
+var descuento=(compra*0.15); 
+var resultado=(compra-descuento); 
+console.log(resultado)
+
+//exercicio 4 porcentaxe de homes e mulleres
+var mulleres=10; 
+var homes=10; 
+var totalEstudiantes = homes + mulleres;
+var porcentaxeHomes = (homes / totalEstudiantes) * 100;
+var porcentaxeMulleres = (mulleres / totalEstudiantes) * 100; 
+console.log(porcentaxeHomes); 
+console.log(porcentaxeMulleres);
+
+//exercicio5 pasar euros a dolares e pesetas
+var euros=10; 
+var pasarpeseta=(euros*166); 
+var pasardolares=(euros*1.07); 
+console.log(euros); 
+console.log(pasarpeseta); 
+console.log(pasardolares); 
+
+//exercicio 6 extra de comision 
+var salario=1000; 
+var comision1=1200*0.1;  
+var comision2=350*0.1;  
+var comision3=5600*0.1; 
+var totalcomision=comision1 + comision2 + comision3; 
+var salariofinal=salario + totalcomision; 
+console.log(salariofinal); 
+
+//Exercicio 7 
+let farenheit = prompt("introduce la temperatura: "); 
+
+//paso a numero o farenheit pois é un string 
+farenheit=(Number(farenheit)); 
+grados=(farenheit-32)*0.555; 
+console.log(grados);
+
+//datos da tabla cos resultados 
+var peso = 70; 
+var altura=1.7; 
+var idade = 30; 
+var calorias = 10*peso + 6.25*altura - 5*idade; 
 
 
+var tablero = ' <table border="1">' +
+    '<tr>' +
+        '<td>peso</td>' +
+        '<td>altura</td>' +
+        '<td>idade</td>' +
+        '<td>calorias</td>' + 
+        '</tr>' +
+    '<tr>' +
+        '<td>' + peso + '</td>' + 
+        '<td>' + altura + '</td>' +
+        '<td>' + idade + '</td>' +
+        '<td>' + calorias + '</td>' +
+        '</tr>' + 
+    '</table>' 
 
+    document.write(tablero); 
+
+    //Exercicio8 descomposicion de un numero  
+    var numero = prompt("Introduce un numero de 4 digitos");
+    var millares = Math.floor(numero / 1000);
+    var centenas = Math.floor((numero % 1000) / 100);
+    var decenas = Math.floor((numero % 100) / 10);
+    var unidades = numero % 10;
+
+        console.log(millares + " son millares, " + centenas + " son centenas, " + decenas + " son decenas, " + unidades + " son unidades");
 
 </script> 
 </html>
