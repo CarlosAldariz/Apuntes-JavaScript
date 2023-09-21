@@ -1,0 +1,27 @@
+<html> 
+    <script> 
+const n = parseInt(prompt("Ingrese la cantidad de números a introducir:"));
+
+let maximo = -Infinity; 
+let posicionMaximo = -1; 
+
+
+for (let i = 1; i <= n; i++) {
+
+  const numero = parseInt(prompt(`Ingrese el número ${i}:`));
+
+  //Si el nuevo numero es mayor que el máximo le damos el valor del maximo, en caso contrario ... 
+  //se pierde como lagrimas en la lluvia . . .
+  if (numero > maximo) {
+    maximo = numero; 
+    posicionMaximo = i; 
+  }
+}
+
+if (posicionMaximo !== -1) {
+  console.log(`El valor máximo (${maximo}) se introdujo en la posición ${posicionMaximo}.`);
+} else {
+  console.log("No se introdujeron números.");
+}
+    </script> 
+</html>
