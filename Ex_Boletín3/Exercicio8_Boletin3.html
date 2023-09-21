@@ -1,0 +1,25 @@
+<html>
+<script> 
+var a = 1;
+var b = 1;
+
+//Creo unha pregunta para darlle un limite a serie 
+//fibonacci para que non "embucle" 
+
+var para = prompt("hasta que numbero le fibonacci"); 
+var stap = Number(para);
+
+
+console.log(a);
+
+while (b < para) { 
+  console.log(b); 
+
+  var temp = a + b; 
+  a = b; 
+  b = temp; 
+} 
+
+
+</script> 
+</html>
