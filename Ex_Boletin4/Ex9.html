@@ -1,0 +1,15 @@
+<html> 
+    <script> 
+var cadea =prompt("Introduce unha cadea que vai quedar sen os indices");
+if (indiceInicio < 0) {
+    indiceInicio = 0;
+  }
+  if (indiceFin > cadea.length - 1) {
+    indiceFin = cadea.length - 1;
+  }
+  var subcadea = cadea.slice(indiceInicio, indiceFin + 1);
+  
+  console.log(subcadea)
+
+    </script> 
+</html>
