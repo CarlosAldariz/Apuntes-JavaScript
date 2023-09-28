@@ -1,0 +1,32 @@
+<html> 
+    <script> 
+    let namba = prompt("Escribe o numero 1") 
+    let namba1 = prompt("Escribe o numero 2") 
+    let namba2 = prompt("Escribe o numero 3") 
+    let namba3 = prompt("Escribe o numero 4") 
+    let namba4 = prompt("Escribe o numero 5") 
+    let namba5 = prompt("Escribe o numero 6") 
+    let namba6 = prompt("Escribe o numero 7") 
+    let namba7 = prompt("Escribe o numero 8") 
+    let namba8 = prompt("Escribe o numero 9") 
+    let namba9 = prompt("Escribe o numero 10") 
+
+    var arrai = [Number(namba), Number(namba1), Number(namba2), Number(namba3), Number(namba4), Number(namba5), Number(namba6), Number(namba7), Number(namba8), Number(namba9)]; 
+   
+        var media = 0;
+
+    for (var i = 0; i < arrai.length; i++) { 
+            media += arrai[i];  
+        }  
+
+            media = (media/arrai.length); 
+
+        for (var i = 0; i < arrai.length; i++) { 
+            if(arrai[i] > media) { 
+            console.log("o numero " + arrai[i] + " é maior que a media");
+            }
+        }
+        
+
+    </script> 
+</html>

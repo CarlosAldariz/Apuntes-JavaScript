@@ -1,0 +1,40 @@
+<html> 
+    <script> 
+
+       var numba = prompt("escribe o numero 0"); 
+       var numba1 = prompt("escribe o numero 1"); 
+       var numba2 = prompt("escribe o numero 2"); 
+       var numba3 = prompt("escribe o numero 3"); 
+       var numba4 = prompt("escribe o numero 4"); 
+       var numba5 = prompt("escribe o numero 5"); 
+       var numba6 = prompt("escribe o numero 6"); 
+       var numba7 = prompt("escribe o numero 7"); 
+       var numba8 = prompt("escribe o numero 8"); 
+       var numba9 = prompt("escribe o numero 9");
+
+        var arrai = [Number(numba), Number(numba1), Number(numba2), Number(numba3), Number(numba4), Number(numba5), Number(numba6), Number(numba7), Number(numba8), Number(numba9)]; 
+        var postivo = 0; 
+        var negativo = 0; 
+        var zero = 0;
+
+
+
+        for (var i = 0; i <= arrai.length; i++) { 
+            if (arrai[i] < 0) { 
+                positivo += 1; 
+            } if (arrai[i] > 0) { 
+                negativo += 1;   
+            } if (arrai [i] == 0) { 
+                zero += 1;
+            }
+
+                console.log (`os positivos son `+ postivo) 
+                console.log (`os negativos son `+ negativo) 
+                console.log (`os zeros son `+ zero)
+
+
+
+        }
+
+    </script> 
+</html>
