@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    var nota1=prompt("Nota del primer examen?") 
+    var nota2=prompt("Nota del segundo examen") 
+    var nota3=prompt("Nota del tercer examen?") 
+    var nota4=prompt("Nota del cuarto examen?")
+    
+        nota1=Number(nota1);
+        nota2=Number(nota2); 
+        nota3=Number(nota3);
+        nota4=Number(nota4); 
+
+        var media = (nota1 + nota2 + nota3 + nota4)/4 ;
+        
+
+        if(nota1 > 4) { 
+            console.log("primer examen pasado")
+        } else if (nota1 < 4) { 
+            console.log("suspendestes coma un sesto")
+        }  
+        if (nota2 > 4) { 
+            console.log("segundo examen pasado")
+        } else if (nota2 > 4) { 
+            console.log("suspendestes coma un sesto") 
+        }
+        if(nota3 > 4) { 
+            console.log("tercerr examen pasado")
+        } else if (nota1 < 4) { 
+            console.log("suspendestes coma un sesto")
+        }  
+        if (nota4 > 4) { 
+            console.log("cuarto examen pasado")
+        } else if (nota2 > 4) { 
+            console.log("suspendestes coma un sesto") 
+        } 
+
+        if (media >= 5){ 
+            console.log("APROVASTES DE CHIRIPA")
+        } else { 
+            console.log("mellor vai traballar o mar")
+        }
+    
+    </script>
+</body>
+</html>
