@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script> 
+   //genero dos numeros aleatorios eos meto dentro de unha caixa
+    var num1 = Math.floor(Math.random() * 10);
+    var num2 = Math.floor(Math.random() * 10);
+        document.write(`<p style="border:solid 5px #000000">${num1}</p>`);
+        document.write(`<p style="border:solid 5px #000000">${num2}</p>`); 
+
+    var btn = prompt("introduce 0 si quieres que compare los numeros"); 
+
+    btn = Number(btn);  
+
+    while (btn == 0) { 
+       if (num1 < num2) { 
+        console.log("o primeiro numero é mais grande que o segundo")
+        document.write(`<p style="border:solid 5px #000000">${num2}</p>`); 
+       } else if (num2 < num1){ 
+        console.log("o segundo numero é máis grande que o primeiro")
+        document.write(`<p style="border:solid 5px #000000">${num1}</p>`);
+       } else { 
+        console.log("os numeros son iguais");
+       } 
+
+
+
+
+        btn++;
+    }
+    
+    </script>
+</body>
+</html>
