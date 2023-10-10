@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+/*  Dada unha cadena cifrala con algoritmo César.
+Teremos que pedir a clave de desplazamento dos caracteres e
+substituír todos os caracteres polos desplazadas.
+Exemplo: Ana
+Clave: 1
+Desplázase unha posicion os caracteres, o resultado sería:
+BmB */  
+
+var sisar = "abcd"; 
+var resol = ""; 
+
+var clave = prompt("escribe un numero coa clave de desplazamento Cesar"); 
+if(isNaN(Number(clave))){ 
+    alert("Introduce un numero enteiro!!!");
+}
+
+clave = Number(clave); 
+clave = parseInt(clave);
+ 
+for (let i = 0; i < sisar.length; i++){ 
+    let telasumo=sisar[i].charCodeAt() + 1;
+    resol += String.fromCharCode(telasumo);
+} 
+
+document.write(resol)
+    </script>
+</body>
+</html>

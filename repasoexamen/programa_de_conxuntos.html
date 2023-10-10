@@ -1,0 +1,36 @@
+<html>
+  <script>
+    const citis = new Set();
+    let escoge = 0;
+    console.log("1. Introducir unha nova cidade")
+    console.log("2 ver cidades caragadas no conxunto")
+    console.log("3 Comprobar se unha cidade está cargada no conxunto")
+    console.log("4 Eliminar cidade do conxunto")
+    console.log("5 Salir do programa")
+    escoge = prompt("selecciona una de las 5 opciones");
+
+
+    if (escoge == 1) {
+      aniade = prompt("introduce unha cidade");
+      citis.add(aniade);
+    }
+    else if (escoge == 2) {
+      for(let i of citis){ 
+        console.log(i);
+      }
+    }
+    else if (escoge == 3) {
+      esta = prompt("que cidade queres saber si está o no");
+      citis.has(esta);
+    }
+    else if (escoge == 4) {
+      borrado = prompt("di o nome da cidade a eliminar");
+      citis.delete(escoge);
+    }
+    else if (escoge == 5) {
+      console.log("ciao");
+    } else {
+      console.log("E lojo non sabes poñer un numero do 1 o 5 ? ");
+    }
+  </script>
+</html>

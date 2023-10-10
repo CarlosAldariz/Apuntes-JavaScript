@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+
+        var aleatorio = [Math.floor(Math.random() * 100)]; 
+
+        for (let i = 0; i < 9; i++){ 
+            aleatorio.push(Math.floor(Math.random() * 100));
+        } 
+
+        for (let e = 0; e < 9; e++) { 
+            let veces = aleatorio[e]; 
+            for (let a = 0; a < veces; a++){ 
+                document.write("*");
+            }  
+            document.write("<br>");
+        }
+
+
+    </script>
+</body>
+</html>

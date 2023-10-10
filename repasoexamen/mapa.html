@@ -1,0 +1,32 @@
+<html>
+    <script>
+
+var mapa = new Map([ 
+[6666512436438, "Rigoberto"],
+[4832974562, "Yisus"] 
+    ] 
+); 
+
+for(let[telefono, persona] of mapa){ 
+    console.log(`El telefono de ${persona} es ${telefono}`)
+} 
+
+mapa.set(14162543474, "Arasaka").set(1234567, "Militec"); 
+
+for(let[telefono, persona] of mapa){ 
+    console.log(`El telefono de ${persona} es ${telefono}`)
+}  
+
+
+mapa.delete(4832974562); 
+
+for(let[telefono, persona] of mapa){ 
+    console.log(`El telefono de ${persona} es ${telefono}`)
+} 
+
+ console.log(mapa.has(4832974562)); 
+
+console.log(mapa.has(14162543474));
+
+</script> 
+</html>
