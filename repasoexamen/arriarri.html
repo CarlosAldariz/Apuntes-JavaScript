@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      /*crear unha lista utilizando un array 
+        Debe: 
+        Insertar final do vector
+        Insertar ao inicio do vector 
+        Insertar na posición x do vector 
+        Debe permitir as accions anteriores mediante borrado */
+
+      var arri = [];
+
+      jenesepa: for (i = 0; i < 1; i--) {
+        pole = prompt("que posicion del array quieres cambiar?");
+        pole = Number(pole);
+        if (pole == NaN | null) {
+          pole = prompt("ou pos un numero ou deste bucle non sales");
+        }
+        var dato = prompt("que dato le quieres dar?");
+        arri[pole] = dato; 
+        document.write(arri);
+        var gtfo = prompt("para salir de aqui pulsa V");
+        if (gtfo === "V") {
+          break jenesepa;
+        }
+      }
+      document.write(arri);
+    </script>
+  </body>
+</html>
