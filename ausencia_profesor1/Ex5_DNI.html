@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <script> 
+        var resto = new Map(); 
+        resto.set(0, "T");
+resto.set(1, "R");
+resto.set(2, "W");
+resto.set(3, "A");
+resto.set(4, "G");
+resto.set(5, "M");
+resto.set(6, "Y");
+resto.set(7, "F");
+resto.set(8, "P");
+resto.set(9, "D");
+resto.set(10, "X");
+resto.set(11, "B");
+resto.set(12, "N");
+resto.set(13, "J");
+resto.set(14, "Z");
+resto.set(15, "S");
+resto.set(16, "Q");
+resto.set(17, "V");
+resto.set(18, "H");
+resto.set(19, "L");
+resto.set(20, "C");
+resto.set(21, "K");
+resto.set(22, "E");
+
+        var numelo = Number(prompt("introduce el numero del DNI para saber la letra"));  
+      
+            var letra = resto.get(numelo % 23);    
+            console.log(`la variable es ${letra}`) 
+      
+        </script> 
+</body>
+</html>
