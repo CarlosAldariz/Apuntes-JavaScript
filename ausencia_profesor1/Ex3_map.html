@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script> 
+    var frutis = new Map(); 
+        frutis.set("Limoes", 7); 
+        frutis.set("Naranxas", 10);
+        frutis.set("Peras", 20); 
+        frutis.set("aguacate", 19);
+        frutis.set("Piñas", 2); 
+        frutis.set("Mazás", 5); 
+        frutis.set("amorodos", 29);
+        frutis.set("castañas", 15); 
+        frutis.set("Tomate", 3); 
+
+       var suma = frutis.get("Naranxas") + frutis.get("Peras"); 
+       var iva = (suma * (0.16)) + suma; 
+
+       console.log(iva);
+    </script>
+</body>
+</html>

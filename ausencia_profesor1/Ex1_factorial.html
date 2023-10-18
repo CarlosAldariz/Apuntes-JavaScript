@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+numero = prompt("que numero queres saber o factorial?"); 
+
+numero = Number(numero); 
+if (numero = NaN | null) { 
+    console.log ("debes introducir un numero!!")
+}
+let factorial = 1;
+
+if (numero < 0) {
+  console.log("El factorial no está definido para números negativos");
+} else if (numero === 0) {
+  console.log(`El factorial de ${numero} es 1`);
+} else {
+  for (let i = 1; i <= numero; i++) {
+    factorial *= i;
+  }
+  console.log(`El factorial de ${numero} es ${factorial}`);
+}
+
+    </script>
+</body>
+</html>

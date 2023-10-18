@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+     const fibonacci = [0, 1]; 
+
+for (let i = 2; i < n; i++) {
+  const siguienteNumero = fibonacci[i - 1] + fibonacci[i - 2];
+  fibonacci.push(siguienteNumero);
+}
+
+return fibonacci;
+}
+
+const numeroElementos = 10; 
+const resultado = serieFibonacci(numeroElementos);
+
+console.log(`Serie de Fibonacci con ${numeroElementos} elementos:`);
+console.log(resultado.join(", "));
+    </script>
+</body>
+</html>
