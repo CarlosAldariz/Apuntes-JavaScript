@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script>
+    const array = [1, 2, 2, 3, 4, 4, 4, 5, 5, 5, 5];
+
+if (array.length === 0) {
+  console.log("El array está vacío.");  
+}
+  var repeticion = {}; 
+  var maxrepetido = array [0]; 
+  var contador = 0; 
+  var contadormax = 1; 
+  var namba = 0;
+
+  for ( var i = 0; i < array.length; i++) { 
+    for ( var j = 0; j < array.length; j++){ 
+        document.write("$array[i] , $array[j]")
+        
+        if (array[i] = array[j]) { 
+            contador++; 
+            if (contador > contadormax) {
+            contadormax++; 
+
+            namba = array[i]; 
+
+            
+            } 
+            contador = 0;
+        }  
+
+         document.write(`o numero que mais se repite é: ${namba} repitese ${contadormax} veces `);
+
+    }
+  }
+
+  </script>
+</body>
+</html>

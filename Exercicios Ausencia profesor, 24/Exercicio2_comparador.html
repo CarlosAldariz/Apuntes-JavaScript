@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* escribe un programa que indique se dous arrais son iguais */
+      var arrai1 = [2, 4, 4];
+      var arrai2 = [2, 4, 4];
+
+      arrai1 = arrai1.sort();
+      arrai2 = arrai2.sort(); 
+      distinto = 0;
+
+      if (arrai1.length != arrai2.length) {
+        document.write(`os arrais son distintos `);
+      }
+
+      for (var i = 0; i < arrai1.length; i++) {
+        if (arrai1[i] != arrai2[i]) {
+          distinto++;
+        } 
+        } 
+        if (distinto > 0) { 
+            document.write(`os arrais son distintos`);
+        } else { 
+            document.write(`os arrais son iguais`);
+        }
+        
+
+
+    </script>
+  </body>
+</html>

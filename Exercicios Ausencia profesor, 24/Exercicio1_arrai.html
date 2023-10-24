@@ -1,0 +1,31 @@
+<html> 
+<script> 
+/*Crea un progama que indique cal é o elemento máis repetido dun array unidimensional e cantas veces aparece.*/ 
+
+const array = [1, 2, 2, 3, 4, 4, 4, 5, 5, 5, 5];
+
+if (array.length === 0) {
+  console.log("El array está vacío.");
+} else {
+  const frecuencia = {};
+  let elementoMasRepetido = array[0];
+  let maxFrecuencia = 1;
+
+  array.forEach((element) => {
+    if (frecuencia[element]) {
+      frecuencia[element]++;
+      if (frecuencia[element] > maxFrecuencia) {
+        elementoMasRepetido = element;
+        maxFrecuencia = frecuencia[element];
+      }
+    } else {
+      frecuencia[element] = 1;
+    }
+  });
+
+  console.log(`El elemento más repetido es "${elementoMasRepetido}" con ${maxFrecuencia} repeticiones.`);
+}
+
+
+</script>
+</html>

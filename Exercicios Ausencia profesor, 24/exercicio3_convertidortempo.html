@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*conversor de tempo */
+
+      var dias = Number(prompt("cuantos dias"));
+      var horas = Number(prompt("cuantas horas"));
+      var minutos = Number(prompt("cuantos minutos"));
+
+      dias = dias * 24;
+      horas = (horas + dias) * 60;
+      var segundos = (horas + minutos) * 60;
+
+      document.write(`os segundos son ${segundos}`);
+    </script>
+  </body>
+</html>
