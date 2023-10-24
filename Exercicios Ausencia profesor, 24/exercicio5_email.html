@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var email = prompt("comprueba el email");
+
+      var tienearroba = false;
+
+      if (email.includes("@")) {
+        tienearroba = true;
+      }
+
+      if (!tienearroba) {
+        document.write(`documento non valido faltalle un arroba <br>`);
+      }
+
+      if (email.includes(" ")) {
+        document.write(`tiene espacios el mail, non vale`);
+      }
+
+      if (!/^[a-zA-Z0-9.-@]+$/.test(email)) {
+        document.write(`o documento conten caracteres especiais prohibidos`);
+      } else {
+        document.write(`documento valido`);
+      }
+    </script>
+  </body>
+</html>
