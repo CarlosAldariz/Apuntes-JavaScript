@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+
+    const conjuntos = {};
+
+   
+    document.write("a -crea un conxunto vacío<br>"); 
+    document.write("b -elimina un conxunto creado<br>");  
+    document.write("c -crea un conxunto coa union de dous conxuntos<br>");  
+    document.write("d -crea un conxunto coa intersección de dous conxuntos<br>");  
+    document.write("e -introduce un elemento nun conxunto indicado<br>");  
+    document.write("f -Elimina un elemento dun conxunto indicado<br>");  
+    document.write("g -Salir");  
+
+        var conxunto = prompt ("selecciona un conxunto a, b, c, d, e, f, g ");
+   
+    switch (conxunto) { 
+
+    case a: 
+
+    var nomecunxunto = prompt("escribe o nome do arrai"); 
+
+        var nomeconxunto = []; 
+        document.write("arrai creado correctamente");
+    
+    break; 
+
+    case b: 
+
+    var nomearray = prompt("indica o nome do array a borrar"); 
+
+    if (nomearray !== "undefined") { 
+        delete nombrearray; 
+        document.write("arrai eliminado correctamente");
+    } else { 
+        document.write("el nombre proporcionado no existe")
+    } 
+
+
+    break; 
+
+    case c: 
+
+    var arrai1 = prompt("escribe o nome do primer arrai"); 
+    var arrai2 = prompt ("escribe o nome do segundo arrai"); 
+
+    var doblearrai = arra1.concat(arrai2);
+
+    
+}
+
+    </script>
+</body>
+</html>

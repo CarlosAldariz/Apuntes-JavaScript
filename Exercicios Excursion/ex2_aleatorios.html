@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var total = 0;
+      for (var i = 1; i < 100; i++) {
+        var numero = Math.floor(Math.random() * 10);
+        total += numero;
+      }
+
+      if (total < 500) {
+        document.write(`el total es menos de 500<br>`);
+      } else {
+        document.write(`el total es mayor de 500`);
+      }
+
+      document.write(`el total es ${total}`);
+    </script>
+  </body>
+</html>
