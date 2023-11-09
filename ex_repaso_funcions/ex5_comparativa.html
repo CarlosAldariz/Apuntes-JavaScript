@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script> 
+    var palabra1 = prompt("palabra a comparar");
+    var palabra2 = prompt("palabra a comparar"); 
+    var palabra3 = []; 
+    var palabra4 = []; 
+    var contador = 0;
+    for (let i = 0; i < palabra1.length; i++){ 
+        palabra3.push(palabra1[i]);
+    }  
+    for (let e = 0; e < palabra2.length; e++){  
+        palabra4.push(palabra2[e]);
+    }
+
+
+    function latiene(palabra3, palabra4) { 
+        palabra3.sort(); 
+        palabra4.sort(); 
+
+        if (palabra3.length != palabra4.length) { 
+            return false;
+        }   else {
+        for (let a = 0; a < palabra4.length; a++) { 
+            if (palabra3[a] == palabra4[a]) { 
+                contador++; 
+            } }
+                if (contador == palabra3.length) { 
+                    return true;
+                } else { 
+                    return false; 
+                }
+            }
+        }
+     
+
+    console.log(contador);
+    console.log(palabra3); 
+    console.log(palabra4);
+    console.log(latiene(palabra3, palabra4));
+   </script>
+</body>
+</html>

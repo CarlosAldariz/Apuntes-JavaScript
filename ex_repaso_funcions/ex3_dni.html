@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+        let tabla = new Map([
+[0, "T"],
+[1, "R"],
+[2, "W"],
+[3, "A"],
+[4, "G"],
+[5, "M"],
+[6, "Y"],
+[7, "F"],
+[8, "P"],
+[9, "D"],
+[10, "X"],
+[11, "B"],
+[12, "N"],
+[13, "J"],
+[14, "Z"],
+[15, "S"],
+[16, "Q"],
+[17, "V"],
+[18, "H"],
+[19, "L"],
+[20, "C"],
+[21, "K"],
+[22, "E"],
+]); 
+
+var dni = Number(prompt("Introduce o teu dni")); 
+
+function letradni(dni) { 
+    var letra = dni%23; 
+    console.log("a letra é:")
+    console.log(tabla.get(letra))
+} 
+
+letradni(dni);
+        
+
+    </script>
+</body>
+</html>
