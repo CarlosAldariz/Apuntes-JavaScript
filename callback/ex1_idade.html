@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script> 
+    
+    var idade = Number(prompt("instroduce a idade da persoa")); 
+
+    function validaridade(idade){ 
+        if (idade < 0 || idade > 120 ) { 
+            return false; 
+        } else { 
+            return true;
+        }
+    } 
+
+    function desenvolvemento(validaridade){ 
+        if (validaridade(idade) == true){
+        if (idade <= 3) { 
+            console.log("bebé");
+        } 
+        if (idade > 3 && idade <= 11){ 
+            console.log("neno");
+        } 
+        if (idade > 11 && idade <= 18) { 
+            console.log("adolescente"); 
+        } 
+        if (idade > 18) { 
+            console.log("adulto")
+        }
+    } else { 
+        console.log("idade non valida");
+    }
+}
+
+    desenvolvemento(validaridade);
+
+
+    </script>
+</body>
+</html>

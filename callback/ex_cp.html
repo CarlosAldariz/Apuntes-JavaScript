@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script> 
+
+        var cp = (prompt("Introduce o codigo postal"));  
+        var contador = 0;
+
+        function comprobar(cp){
+        if (cp.charAt(0) > 5) { 
+            return false;
+        } else { 
+            contador++;
+        } 
+        if (cp.length > 5) { 
+            return false;
+        } 
+            contador ++; 
+
+        if (contador == 2){ 
+            return true;
+        }
+        
+    } 
+    console.log(comprobar(cp)); 
+
+  
+
+    function provincia(cp){ 
+        if (comprobar(cp) == true) { 
+            España.get(cp.substring(0,2))
+        } else { 
+            return false;
+        }
+    } 
+
+    console.log(provincia(comprobar));
+
+    </script>
+</body>
+</html>

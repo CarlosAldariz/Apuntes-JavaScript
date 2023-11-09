@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script> 
+    var cash = Number(prompt("escribe o salario")); 
+
+    function compr(cash){ 
+        if (cash > 1600 || cash < 0){ 
+            return false;
+        } else { 
+            return true;
+        }
+    } 
+
+    function incremento(compr){ 
+        if (compr(cash) == true) { 
+            for (var i = 1; i < 6; i++ ){ 
+                cash = cash*1.05; 
+                console.log(`o salario do ano ${i} é de ${cash}`);
+            }
+
+        }
+    } 
+
+    incremento(compr);
+
+
+    </script>
+</body>
+</html>
