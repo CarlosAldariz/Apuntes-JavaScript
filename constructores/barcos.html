@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    //creo a clase e o constructos e fago que o programa continue funcionando con variables valeiras 
+    //en caso de non pasarlle algún tipo de dato
+        class barcos { 
+                constructor(CV, orixe, destino, carga, cargamax) {
+            if (CV == undefined) { 
+                this.CV = ""; 
+                this.orixe = orixe; 
+                this.destino = destino; 
+                this.carga = carga; 
+                this.cargamax = cargamax; 
+             }
+            if (orixe == undefined) { 
+                this.CV = CV; 
+                this.orixe = ""; 
+                this.destino = destino; 
+                this.carga = carga; 
+                this.cargamax = cargamax; 
+            } 
+            if (destino == undefined) { 
+                this.CV = CV; 
+                this.orixe = orixe; 
+                this.destino = ""; 
+                this.carga = carga; 
+                this.cargamax = cargamax; 
+            } 
+            if (carga == undefined){ 
+                this.CV = CV; 
+                this.orixe = orixe; 
+                this.destino = destino; 
+                this.carga = ""; 
+                this.cargamax = cargamax; 
+            } 
+            if (cargamax == undefined){ 
+                this.CV = CV; 
+                this.orixe = orixe; 
+                this.destino = destino; 
+                this.carga = carga; 
+                this.cargamax = ""; 
+            } else { 
+                this.CV = CV; 
+                this.orixe = orixe; 
+                this.destino = destino; 
+                this.carga = carga; 
+                this.cargamax = cargamax; 
+            }
+            }  
+            //zarpa o barco, de onde sale e a donde vai, definimolo
+                zarpar(orixe, destino){ 
+                    console.log(`o barco sale de ${this.orixe} `); 
+                    console.log(`o barco vai a ${this.destino}`);
+                       
+                }
+            
+            //creo o metodo carga e comprobo que a carga non supere a carga maxima
+            cargando (carga) { 
+                if (carga < this.cargamax) { 
+                    this.carga = carga + this.carga; 
+                } else { 
+                    console.log("a carga supera a carga maxima non pode cargarse");
+                }
+            } 
+            //metodo observador para saber a carga
+            observador () { 
+                console.log(` a carga é ${this.carga}`); 
+                console.log(`o motor ten ${this.CV} CV` ); 
+                console.log(`o porto destino é ${this.destino} `); 
+            } 
+
+        } 
+
+        const barco = new barcos(300, "Corme", "Laxe", 1, 10000); 
+
+        barco.observador(); 
+
+        barco.cargando(250); 
+
+        barco.observador(); 
+
+        barco.cargando(300000); 
+
+        barco.observador(); 
+
+        barco.zarpar();
+
+
+
+
+    </script>
+</body>
+</html>

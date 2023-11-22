@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+
+    class contaBancaria {  
+        constructor(propietario, saldo) {  
+           //comprobo se me pasa o propietario
+             
+           if (propietario == undefined) { 
+                this.propietario = ""; 
+                this.saldo = saldo;
+            } 
+            //comprobo se me pasa o saldo
+            if (saldo == undefined) { 
+                this.saldo = ""; 
+                this.propietario = propietario;
+            }  
+            if (saldo != undefined && propietario != undefined) {
+            this.saldo = saldo; 
+            this.propietario = propietario; 
+        } }
+
+        sacarDineiro (cash) { 
+            if (this.saldo < cash) { 
+                document.write("o saldo non é suficiente")
+            } else { 
+                this.saldo = this.saldo - cash;
+            } 
+        }
+
+            ingresarDineiro (mony) { 
+                this.saldo = this.saldo + mony; 
+                console.log(this.saldo);
+            }
+        
+
+            observdor () { 
+                console.log(`o saldo é  ${this.saldo} `); 
+                console.log(`o propietario é ${this.propietario} `);
+            }
+        }
+
+    const dine = new contaBancaria("Yisus", 5); 
+
+    dine.sacarDineiro(10); 
+
+    dine.ingresarDineiro(1000000); 
+
+    dine.observdor();
+
+    </script>
+</body>
+</html>
