@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    class telefono{ 
+    numero = 621123456; 
+        constructor(numero){ 
+            this.numero = numero;
+        } 
+        observador() { 
+            console.log(`${this.numero}`);
+        }
+    }  
+
+    class movil extends telefono{ 
+        so = "android"; 
+        online = true; 
+        constructor(numero, so, online){ 
+            super(numero); 
+            this.so = so; 
+            this.online = online; 
+        } 
+        observador() { 
+            console.log(`numero`); 
+            console.log(`a so é ${this.so}`); 
+            console.log(`ten online? ${this.online}`); 
+        }    
+    } 
+
+    class fijo extends telefono { 
+        cable = true; 
+        prefijo = 981; 
+
+        constructor(numero, cable, prefijo){ 
+            super(numero); 
+            this.cable = cable; 
+            this.prefijo = prefijo;
+        } 
+        observador() { 
+            console.log(`numero`); 
+            console.log(`o prefijo é ${this.prefijo}`); 
+            console.log(`ten cable? ${this.cable}`); 
+        }    
+    } 
+
+    let telef = new telefono(621123789); 
+
+    let honor = new movil(652349, "android", true); 
+
+    let fijisimo = new fijo(981212121, false, 981); 
+
+    telef.observador(); 
+     honor.observador(); 
+   fijisimo.observador(); 
+
+   fijisimo.observador(); 
+   fijisimo.observador(); 
+    let amarillas = [telef, honor, fijisimo]; 
+    
+    for (let i = 0; i< amarillas.length; i++){ 
+        amarillas[i].observador(); 
+    } 
+        amarillas = []; 
+        let stap;
+        do {        
+            stap = prompt(`pulsa a para cargar otro objeto`);
+            let tele = new telefono(parseInt(prompt(`escribe aqui o numero de telefono`))); 
+            amarillas.push(tele);
+         } while (stap == "a")
+    
+
+    for (let i = 0; i< amarillas.length; i++){ 
+        amarillas[i].observador(); 
+    }
+    
+
+    </script>
+</body>
+</html>
