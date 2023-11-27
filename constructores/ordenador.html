@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    class ordenador {  
+        marca = ""; 
+        modelo = ""; 
+        ram = ""; 
+        capacidade = ""; 
+        pulgadas = "";
+        constructor (marca, modelo, ram = 4, capacidade = 512, pulgadas = 17) { 
+            if (marca == undefined && modelo == undefined){ 
+            this.modelo= prompt("escribe o modelo"); 
+            this.marca = prompt("escribe a marca"); 
+            this.ram = ram; 
+            this.capacidade = capacidade;  
+            this.pulgadas = pulgadas;
+            }
+            else if (modelo == undefined) { 
+            this.marca = marca; 
+            this.modelo= prompt("escribe o modelo"); 
+            this.ram = ram; 
+            this.capacidade = capacidade;  
+            this.pulgadas = pulgadas;
+        } 
+        else if (marca == undefined){ 
+            this.marca = prompt("escribe a marca");  
+            this.modelo = modelo; 
+            this.ram = ram; 
+            this.capacidade = capacidade;  
+            this.pulgadas = pulgadas;
+        } 
+        else { 
+            this.modelo = modelo; 
+            this.marca = marca; 
+            this.ram = ram; 
+            this.capacidade = capacidade;  
+            this.pulgadas = pulgadas;
+        }
+
+        
+        
+        }
+    
+        toStringObserver() { 
+            console.log(this.marca);
+            console.log(this.modelo);
+            console.log(`${this.ram} GB`);
+            console.log(`${this.capacidade} GB`);
+            console.log(`${this.pulgadas} pulgadas`);
+        } 
+    }   
+
+    let pc = new ordenador("hp","notebook", 2, 1000, 17) 
+    pc.toStringObserver();
+
+    </script>
+</body>
+</html>

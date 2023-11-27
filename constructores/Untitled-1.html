@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script> 
+    //arrancamos a class e pasamoslle os modelos
+      class ordenador {
+        marca = "";
+        modelo = "";
+        ram = "";
+        capacidade = "";
+        pulgadas = "";
+        constructor(marca, modelo, ram, capacidade, pulgadas) {
+          this.marca = marca;
+          this.modelo = modelo;
+          this.ram = ram;
+          this.capacidade = capacidade;
+          this.pulgadas = pulgadas;
+        }
+
+        //facemos un constructor que mostre osn datos por pantalla
+        toStringObserver() {
+          console.log(this.marca);
+          console.log(this.modelo);
+          console.log(`${this.ram} GB`);
+          console.log(`${this.capacidade} GB`);
+          console.log(`${this.pulgadas} pulgadas`);
+        }
+      } 
+
+    //mediante un bucle do while, obligamoslle a dar a marca e o modelo
+      do { 
+        modelo = prompt("escribe o modelo"); 
+        marca = prompt("escribe a marca");
+      } while (modelo == "" && marca == "") ;
+      ram = 4; 
+      capacidade = 512; 
+      pulgadas = 17; 
+
+      //creamos un obxecto e mostramolo por pantalla
+
+     let pc = new ordenador(marca, modelo, ram, capacidade, pulgadas);
+     pc.toStringObserver();
+    </script>
+  </body>
+</html>

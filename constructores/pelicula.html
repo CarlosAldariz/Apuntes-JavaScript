@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class peli {
+          constructor(director, lanzamento, actores, titulo, presuposto){
+          if (presuposto == null){
+              this.director = director;
+          this.lanzamento = lanzamento;
+          this.actores = actores;
+          this.titulo = titulo;
+          } else if (lanzamento == null){
+            this.director = director;
+          this.actores = actores;
+          this.titulo = titulo;
+          this.presuposto = presuposto;
+          }
+          else {
+              this.director = director;
+          this.lanzamento = lanzamento;
+          this.actores = actores;
+          this.titulo = titulo;
+          this.presuposto = presuposto;
+         }
+      } 
+      observador () { 
+        console.log (`o director é ${director}`);
+        console.log (`a peli estrenase o ${lanzamento}`); 
+        console.log (`os actores son ${actores}`); 
+        console.log (`o titlulo é ${titulo}`); 
+        console.log (`o presuposto é ${presuposto}`);
+      } 
+
+      idade () { 
+        let idade = 2023; 
+        idade = 2023 - lanzamento; 
+        console.log(`a peli ten ${idade} anos`);
+    }
+    } 
+    
+    director = prompt(`quen é o director da pelicula?`); 
+    lanzamento = parseInt(prompt(`en que ano se estrena?`)); 
+    actores = prompt(`que actores participan nela`); 
+    titulo = prompt(`titulo da pelicula`);
+    presuposto = parseFloat(prompt(`que presuposto ten`)); 
+
+    let napoleon = new peli(director, lanzamento, actores, titulo, presuposto); 
+    
+    napoleon.observador(); 
+
+    napoleon.idade();
+    
+
+
+
+
+
+    </script>
+  </body>
+</html>
