@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script>  
+        //fago un prompt para pedir por pantalla 
+        //arranco unha variable para filñtrar despois
+        var letra = prompt("escribe unha letra");  
+        vogal = false;
+        //filtro por letras cambiando a variable do filtro
+        function es(name){  
+            letra = letra.toLowerCase();
+     if (name == "a" || name == "e" || name == "i" || name == "o"|| name == "u") { 
+        vogal = true;  
+     } 
+     return vogal;
+        } 
+
+            //si o que me da é un booleano verdadeiro ou falso, mostro resposta por consola 
+
+        if ( es(letra) == true) { 
+            console.log(`${letra} é unha vogal `)
+        } else { 
+            console.log(`ti escibiches: ${letra}, esto non é unha vogal`);
+        }  
+
+   
+    </script>
+</body>
+</html>

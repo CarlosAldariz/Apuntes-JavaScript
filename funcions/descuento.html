@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    /* funcion que recida un precio 
+    unha porcentaxe de desconto e o novo precio */ 
+
+    var precio = 100; 
+    var porcentaxe = 10; 
+
+    function descuento(precio,porcentaxe){ 
+        porcentaxe = porcentaxe/100; 
+
+        precio =precio - (precio * porcentaxe); 
+
+        return precio;
+    } 
+
+    console.log(descuento(precio, porcentaxe));
+
+
+    </script>
+</body>
+</html>
