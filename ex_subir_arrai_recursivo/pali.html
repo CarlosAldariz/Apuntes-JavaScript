@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    var pali = prompt("escribe una palabra");  
+    a=0; 
+    b = (pali.length - 1); 
+
+        var espali = () => { 
+        if (pali[a] == pali[b]){
+            a = a+1; 
+            b = b-1; 
+            if (b == 0) { 
+               return true; 
+            }
+            espali();
+        } else { 
+            return false;
+        } 
+    }
+    console.log(espali(pali));
+
+    </script>
+</body>
+</html>

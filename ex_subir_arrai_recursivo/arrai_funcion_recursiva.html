@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    /* insertar nun array numeros aleatorios 
+    o numero maximo e numero minimo debese pedir por teclado 
+    facer funcions con frecha e recursividade */ 
+
+    var max = Number(prompt("Escribe o numero maximo"));
+    var min = Number(prompt("Escribe o numero minimo")); 
+    var array = [];
+
+    var fun = () => { 
+        if (min != max) { 
+            array.push(Math.floor(Math.random() * 100) + 1); 
+        min = min + 1; 
+        fun(); 
+        } 
+        return(array)
+
+    } 
+
+    console.log(fun());
+
+    </script>
+</body>
+</html>

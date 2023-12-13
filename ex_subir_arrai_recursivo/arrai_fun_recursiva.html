@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    let num = parseInt(prompt("Escribe el numero hasta el que quieres contar")); 
+    let zero = 1; 
+    let array = []; 
+    array.push(num);
+
+    var cont = () => { 
+        if (zero != num) { 
+            array.push(num - 1); 
+            num = num - 1; 
+            cont();
+        } 
+        return(array);
+    } 
+    console.log(cont(zero, num, array))
+
+    </script>
+</body>
+</html>
