@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    class nave { 
+        lugarActual = ""; 
+        lugarDestino = ""; 
+        km = 0.0;
+        constructor(lugarActual, lugarDestino, km) { 
+            this.lugarActual=lugarActual; 
+            this.lugarDestino=lugarDestino; 
+            this.km = parseFloat(km);
+        } 
+
+        arranque(lugarDestino, km){ 
+            this.lugarDestino = lugarDestino;
+            this.km += km;
+        } 
+
+    } 
+    
+    const subeaminave = new nave("marte", "saturno", 10009.00); 
+    
+
+        if (subeaminave instanceof Map) { 
+            document.write("nn vale");
+        } else { 
+            atributos = [];
+        let i = 0;
+            for (atributo in subeaminave){ 
+                atributos[i] = atributo;
+                i = i + 1;
+            }
+            valores = Object.values(subeaminave); 
+            
+            for (i = 0; i < atributos.length; i++){ 
+                
+                document.write(`${atributos[i]} : ${valores[i]}` + " <br> ");
+            } 
+        }
+    
+    </script>
+</body>
+</html>

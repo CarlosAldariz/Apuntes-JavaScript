@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    //ex1. 
+        //creo un constructor de producto con parte dos campos obligatorios 
+        //permitiendo tener funcionalidad en caso de que no tenga proveedor
+        class producto { 
+            codigo; 
+            nome; 
+            proveedor; 
+            existencias; 
+            fechaventa; 
+            fechacompra;
+            constructor(codigo, nome, proveedor, existencias, fechaventa, fechacompra) { 
+                if (proveedor == undefined){ 
+                    this.codigo = codigo; 
+                    this.nome = nome; 
+                    this.proveedor = ""; 
+                    this.existencias = 0; 
+                    this.fechaventa = ""; 
+                    this.fechacompra = "";
+                } else {
+                    this.codigo = codigo; 
+                    this.nome = nome; 
+                    this.proveedor = proveedor; 
+                    this.existencias = 0; 
+                    this.fechaventa = ""; 
+                    this.fechacompra = "";
+            } 
+        }
+
+            //creo una funcion de carga que aumente las existencias del producto 
+            //poño un comprovante que non permita pasar un numero negativo 
+            //dou por sentado que se pasa un numero a funcion 
+            //actualizo o valor da fecha de compra
+            compra(existencias, fechacompra){ 
+                if (existencias < 0) { 
+                    document.write("non podes facer unha compra negativa")
+                } else { 
+                    this.existencias = this.existencias + existencias; 
+                    this.fechacompra = fechacompra;
+                }
+            } 
+
+            //creo unha funcion de venta que reste as existencias actuales 
+            //poño un comprobante que non permita pasar un numero negativo 
+            //dou por sentado que se pasa un numero a funcion 
+            //actualizo o valor da fecha de venta
+            venta(existencias, fechaventa){ 
+                if (existencias < 0){ 
+                document.write("non podes facer unha venta negativa, quizás refireste a unha compra"); 
+                    } else  { 
+                    this.existencias = this.existencias - existencias; 
+                    this.fechaventa = fechaventa;
+                    }
+                } 
+
+                //creo o observador para sacar todos os datos por pantalla 
+                //tamén me servcirá para saber se as operacions funcionan
+            observador() { 
+                document.write(`o codigo é ${this.codigo}` + " <br> ");
+                document.write(`o nome é ${this.nome}` + " <br> ");
+                document.write(`se ten proveedor: ${this.proveedor}` + " <br> ");
+                document.write(`cantidade amalacenada: ${this.existencias}` + " <br> "); 
+                document.write(`ultima fecha de compra: ${this.fechacompra}` + " <br> "); 
+                document.write(`ultima fecha de venta: ${this.fechaventa}` + " <br> ");
+            }
+            } 
+
+            //fago varias probas para ver se funciona: 
+            //que o proveedor non ten que estar definido 
+            //que o metodo carga e descarga funcionan
+
+            const motos = new producto ("15175", "harley", "frutas_pepe", 0, "", ""); 
+            motos.observador(); 
+
+            motos.compra(250, "21/10/2555"); 
+
+            motos.observador();
+
+            motos.venta(100, "22/2/2556"); 
+
+            motos.observador(); 
+
+            //unha vez comprobo que os comprobantes funcionan 
+            //creo tres obxectos máis para cargalos nun arrai 
+
+            productArrai = []; 
+            let codigo = ""; 
+            let nome = ""; 
+            let proveedor = "";
+
+            for (let i = 0; i < 3; i++){  
+                codigo = prompt("codigo do producto?");
+                nome = prompt("nome do producto?"); //desculpa a falta de imaxinacion XD 
+                proveedor = prompt("se ten proveedor escribe o nome"); 
+                let obxecto = new producto(codigo, nome, proveedor, 0, "", ""); 
+                productArrai.push(obxecto);
+            } 
+
+            //fago unha segunda comprobacion na cal vexo se o arrai se cargou correctamente 
+
+            for (let j = 0; j < 3; j++) { 
+                productArrai[j].observador();
+            }
+
+    </script>
+</body>
+</html> 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script>
+    //creamos un mapa cos valores que vamos a usar a posteriori 
+
+        var frutas = new Map([ 
+        ["pera", 1.25],
+        ["manzana", 1.70], 
+        ["kiwi", 2.90],
+        ["mandarina", 1.19], 
+        ["fresa", 3.75]
+        ])
+
+        //creo unha funcion que saque por pantalla o mapa 
+        function mostramapa (frutas) {
+        for(let[fruta, precio] of frutas){ 
+    document.write(`O kg de ${fruta} vale ${precio}` + " <br> ")
+} 
+        }
+
+    //pregunto duas variables coas que vou a traballar
+    //fago comprobacions para que unha de elas estea no mapa 
+    //en caso contrario metoo nun bucle que o obrigue a sacar unha das do mapa
+    let cliente = prompt("que fruta queres") 
+   function temolafruta (cliente){
+    while (!frutas.has(cliente)) { 
+        cliente = prompt("que fruta queres, que esa non a temos")
+    }
+    return cliente;
+}   
+
+    //pregunto a cantidade e fago unha funcion simple para buscala no mapa 
+    //e multiplicala pola cantidade que me da o cliente, sacando por pantalla o precio pedido
+
+    let cartos = parseFloat(prompt("que cantidade? (en kg)"))
+
+    function precio(cliente, cartos, frutas){ 
+    final = frutas.get(cliente) * cartos; 
+    document.write(`o precio a pagar polo ${cartos} kg de ${cliente} é de ${final}`);
+    }
+
+mostramapa(frutas); 
+
+temolafruta(cliente);
+
+precio(cliente, cartos, frutas)
+
+
+    </script>
+</body>
+</html>

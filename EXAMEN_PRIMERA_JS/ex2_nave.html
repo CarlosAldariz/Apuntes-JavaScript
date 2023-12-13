@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script> 
+    //creo o obxecto nave cxos atributos requeridos
+    class nave { 
+        lugar; 
+        destino; 
+        km;
+        constructor(lugar, destino, km) { 
+            this.lugar = lugar; 
+            this.destino = destino; 
+            this.km = parseFloat(km); 
+        } 
+
+        //creo o metodo de arranque que lle sumara os km recorridos actuais aos que xa ten 
+        //comprobo que o numero é positivo e que non se lle pasa un string 
+        //cambiamos o lugar da nave polo seu destino tras facer o recorrido
+        arranque (lugar, destino, km) { 
+            this.km = this.km + km; 
+            this.lugar = destino; 
+            this.destino = destino;
+        } 
+
+    } 
+
+        //creo unn obxecto nave 
+        let halconMilenario = new nave("marte", "marte", 0); 
+
+        halconMilenario.arranque("marte", "saturno", 150000000);
+        
+        //comprobo se o obxecto é un mapa
+       if (halconMilenario instanceof Map){ 
+        document.write("o halcon é un mapa")
+        } else {
+       //en caso de non ser un mapa recorroo co nomes dos seus atributos 
+       //e cos seus valores para sacar por pantalla o requerido 
+       //sen usar observador
+        atributos = []; 
+        let i=0; 
+            //paso os elementos un a un a un arrai
+        for (elemento in halconMilenario){ 
+            atributos[i]= elemento; 
+            i = i+1;
+        }  
+
+        //doulle valor aos atributos do obxecto e sacoo por pantalla
+       valores = Object.values(halconMilenario) 
+        
+       for(i=0;i<atributos.length;i++) 
+{ 
+    document.write(atributos[i]+ " : " + valores[i] + " <br> ")
+}  
+        }
+       
+
+
+    </script>
+</body>
+</html>

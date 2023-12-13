@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    //creo unhga funcion que pida un texto por pantalla 
+    //eliminilleos espacios e o pase a minusculas 
+    function texto1(callback){ 
+        var frase = [];
+
+        let concat = prompt("escribe unha frase"); 
+
+        //pasaas a minusculas e elimino espacios
+        concat.toLowerCase(); 
+        concat.trim();  
+        concat.split(""); 
+
+        for (let i = 0; i < concat.length; i++ ) {
+        document.write(`${concat[i]}`); 
+    } 
+} 
+
+    function texto2(callback){ 
+        var frase = [];
+
+        let concat = prompt("escribe unha frase"); 
+
+        //pasaas a minusculas e elimino espacios a esquerda e dereita
+        concat.toLowerCase(); 
+        concat.trim();  
+        concat.split(""); 
+
+        for (let i = 0; i < concat.length; i++ ) {
+        document.write(`${concat[i]}`); 
+
+    } 
+}   
+
+    //concateno os textos e sacoos por pantalla
+
+    let textofinal = "";
+
+    function final (texto1, texto2, textofinal) { 
+        for (var i = 0; i < texto1.length; i++) {
+            textofinal += texto1[i];
+       }
+
+      for (var i = 0; i < texto2.length; i++) {
+        textofinal += texto2[i];
+      } 
+      document.write(textofinal)
+    } 
+
+    texto1(final) 
+    texto2(final)
+
+
+
+    </script>
+</body>
+</html>
