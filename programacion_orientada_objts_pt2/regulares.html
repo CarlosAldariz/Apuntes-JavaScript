@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Crear expresiones regulares para
+
+      //Recibir exclusivamente numeros do 0 ao 4
+      let expresion1 = new RegExp("");
+      document.write("España ");
+      document.write(expresion1.test("España") + "<br>");
+      document.write("francia ");
+      document.write(expresion1.test("francia") + "<br>");
+
+      //Recibir exclusivamente cadeas que comencen por maiuscula
+      let expresion2 = new RegExp("^A-Z");
+      document.write("España ");
+      document.write(expresion2.test("España") + "<br>");
+      document.write("francia ");
+      document.write(expresion2.test("francia") + "<br>");
+
+      //Recibir exclusivamente cadeas que rematen por "dw"
+      let expresion3 = new RegExp("dw$");
+      document.write("sarf ");
+      document.write(expresion3.test("sarf") + "<br>");
+      document.write("francia ");
+      document.write(expresion3.test("francia") + "<br>");
+
+      //Impedir que se reciban numeros que conteñan 0
+      let expresion4 = new RegExp("0");
+      document.write("España ");
+      document.write(expresion3.test("España") + "<br>");
+      document.write("francia ");
+      document.write(expresion3.test("francia") + "<br>");
+    </script>
+  </body>
+</html>

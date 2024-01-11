@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var planta =
+        '{"nome":"Cactus", "especie":"crassa", "orixe":"Mohave", "Estacion_Xermen":"veran", "estacion_poda":"nonten"}';
+
+      var plantuka = JSON.parse(planta);
+
+      document.write(plantuka.nome + "<br>");
+      document.write(plantuka.especie + "<br>");
+      document.write(plantuka.orixe + "<br>");
+      document.write(plantuka.Estacion_Xermen + "<br>");
+      document.write(plantuka.estacion_poda + "<br>");
+
+
+
+
+      var plantuka1 = [] 
+
+    for (var i = 0; i < 3; i++) { 
+        let castania={};
+        castania.nome = prompt ("introduce o nome da planta"); 
+        castania.especie = prompt("introduce especie"); 
+        castania.orixe = prompt("orixe?"); 
+        castania.Estacion_Xermen = prompt(" en que estacion xermina?"); 
+        castania.estacion_poda = prompt ("estacion de poda?"); 
+        plantuka1.push(castania);
+    }
+
+
+    for (var i = 0; i < 3; i++) { 
+      document.write(plantuka1[i].nome + "<br>");
+      document.write(plantuka1[i].especie + "<br>");
+      document.write(plantuka1[i].orixe + "<br>");
+      document.write(plantuka1[i].Estacion_Xermen + "<br>");
+      document.write(plantuka1[i].estacion_poda + "<br>");
+    }
+    
+
+
+    </script>
+  </body>
+</html>

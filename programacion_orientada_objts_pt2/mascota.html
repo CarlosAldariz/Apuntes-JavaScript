@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //creamos o objeto Mascota
+      class Mascota {
+        nome;
+        direccion;
+        NIM;
+        idade;
+        //xeramos o constructor dandolle valor aos atributos segundo os valores dados
+        constructor(nome, direccion, NIM, idade) {
+          this.nome = nome;
+          this.NIM = NIM;
+          this.direccion = direccion;
+          this.idade = idade;
+        }
+      }
+      //creamos a partir dunha variable un obxecto mascota 
+      var snoop = new Mascota("doggydog", "suacasa", 123456, 20);
+
+      //mostramos por pantalla os datos creado un json
+      console.log(JSON.stringify(snoop));
+    </script>
+  </body>
+</html>

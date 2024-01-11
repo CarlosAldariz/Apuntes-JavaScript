@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    class Planta { 
+        nome; 
+        especie; 
+        orixe; 
+        estacion_xermen; 
+        estacion_poda; 
+        constructor (nome, especie, orixe, estacion_xermen, estacion_poda) { 
+            this.nome = nome; 
+            this.especie=especie; 
+            this.orixe=orixe; 
+            this.estacion_xermen=estacion_xermen; 
+            this.estacion_poda=estacion_poda;
+        } 
+
+        observador() { 
+            console.log(nome) 
+            console.log(especie) 
+            console.log(orixe) 
+            conosle.log(estacion_xermen) 
+            console.log(estacion_poda)
+        } 
+        }  
+
+    var cactus = new Planta("Romario", "crassa", "mohave", "veran", "non ten"); 
+
+    console.log(JSON.stringify(cactus)); 
+
+    var xirasol = new Planta("xira", "Sol", "pipascamp", "veran", "nonten");  
+
+    var pakchoi = new Planta("kungfu", "pakki", "china", "nonten", "nonten"); 
+
+    var horta = [cactus, xirasol, pakchoi];
+   
+
+    
+    </script>
+</body>
+</html>
