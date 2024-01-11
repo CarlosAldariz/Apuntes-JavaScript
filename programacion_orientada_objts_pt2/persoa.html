@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        var persoa = 
+        '{"nome":"Pepe", "apelidos":"Juan", "idade":"34"}' ; 
+
+        var persoaJS = JSON.parse(persoa); 
+
+        function verInfo(persoaJS) { 
+            document.write(persoaJS.nome + "<br>");
+            document.write(persoaJS.apelidos + "<br>");
+            document.write(persoaJS.idade + "<br>");
+        } 
+
+            var xente = []; 
+
+        function engadirdatos() {
+            for (var i = 0; i < 2; i++) { 
+        var novapersoa = Object.create(persoaJS);
+        novapersoa.nome = prompt ("introduce o nome"); 
+        novapersoa.apelido = prompt("introduce apelido"); 
+        novapersoa.idade = prompt("idade?"); 
+        xente.push(novapersoa);
+         } 
+        }
+
+         for (var i = 0; i < 2; i++) { 
+            document.write("persoa " + [(i + 1)] + ": <br>");
+            document.write(xente[i].nome + "<br>");
+            document.write(xente[i].apelido + "<br>");
+            document.write(xente[i].idade + "<br>"); 
+            document.write("<br>");
+         }
+
+        
+
+
+    </script>
+</body>
+</html>
