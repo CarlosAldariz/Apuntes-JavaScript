@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    let ano = Number(prompt("ano?"));
+    let mes = Number(prompt("mes?"));
+    let dia = Number(prompt("dia?"));
+
+    let fecha = new Date(ano, mes, dia); 
+
+
+    const tempazo = Date.now(); 
+    
+
+    
+    let tempo = (fecha - tempazo); 
+
+    tempo = tempo * (-1);
+    
+  
+     resposta = new Date(tempo);
+
+    document.write(resposta);
+
+    </script>
+</body>
+</html>
