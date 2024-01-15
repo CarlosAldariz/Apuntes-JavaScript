@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    let validar = prompt("escribe a direccion web"); 
+
+    function validacion (validar) { 
+    if ( validar == /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/) { 
+        return true
+    } else { 
+        return false;
+    } } 
+
+    validacion(validar);
+
+    if (validacion(validar) == true) { 
+        console.log("web valida") 
+    } else { 
+     console.log("tu web es mas falsa que un ferrari made in china");
+    } 
+
+    </script>
+</body>
+</html>
