@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Crear expresiones regulares para
+
+      //Recibir exclusivamente numeros do 0 ao 4
+      let expresion1 = new RegExp("^[0-4]$");
+      document.write("451 ");
+      document.write(expresion1.test("Gz") + "<br>");
+      document.write("francia ");
+      document.write(expresion1.test("francia") + "<br>");
+
+      //Recibir exclusivamente cadeas que comencen por maiuscula
+      let expresion2 = new RegExp("^[A-Z]");
+      document.write("GZ ");
+      document.write(expresion2.test("GZ") + "<br>");
+      document.write("francia ");
+      document.write(expresion2.test("francia") + "<br>");
+
+      //Recibir exclusivamente cadeas que rematen por "dw"
+      let expresion3 = new RegExp('dw$');
+      document.write("sarf ");
+      document.write(expresion3.test("sarf") + "<br>");
+      document.write("francia ");
+      document.write(expresion3.test("francia") + "<br>");
+
+      //Impedir que se reciban numeros que conteñan 0
+      let expresion4 = new RegExp(/[^0]*);
+      document.write("gz ");
+      document.write(expresion3.test("gz") + "<br>");
+      document.write("francia ");
+      document.write(expresion3.test("francia") + "<br>"); 
+
+      let dni= /^[0-9]{8}[A-Z]{1}$/i 
+
+        let CIF = /^[A-Z]{1}[0-9]{8}$/ 
+
+        let CP = /^[0-9]{5}$/ 
+
+        //prohibidos numeros na cadena
+
+        let nonumber = /^\D+$/; 
+
+        let email = /^[a-z0-9.]+@[a-z0-9.]+\.[a-z]{2,4}$/i
+
+
+
+    </script>
+  </body>
+</html>

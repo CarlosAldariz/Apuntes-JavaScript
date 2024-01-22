@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <button id="boton01"> Registrar hora</button> 
+    <div id="div01">---</div> 
+    <table border="1" id=tabla_horas> 
+        <tr> 
+        <th> hora del click </th> 
+        </tr> 
+        </table>
+
+    <script> 
+    'use strict' 
+    function manej_boton01(event){  
+        let fecha = new Date();  
+        let tabla = document.querySelector("#tabla_horas");
+        let terre = document.createElement("tr");
+        let parrafo = document.createElement("td"); 
+        parrafo.textContent = fecha; 
+        tabla.append(terre); 
+        terre.append(parrafo); 
+        
+    }    
+    let boton01 = document.querySelector("#boton01"); 
+    boton01.addEventListener("click", manej_boton01);
+    </script> 
+ 
+</body>
+</html>

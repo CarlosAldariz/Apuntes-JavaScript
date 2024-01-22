@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="crea">creaparrafo</button> 
+    <button id="pinta">pinta y colorea</button> 
+    <div id="parrafo"></div>
+</body> 
+<script>
+//Crear una paxina web que cando pulse un boton co nome "Crear parrafo" cree
+//un parrafo co texto parrafo x<br />
+  //    Cun segundo boton, ao pulsar click, recorrer todos os parrafos do
+    //  documento e poñer en verde os parrafos impartes e en vermello os parrafos
+     // pares 
+let contador = 0;
+
+    function creaparrafo () {  
+        let div = document.querySelector("#parrafo"); 
+        let suma = document.createElement("p"); 
+        div.append(suma); 
+        div.textContent= "sumaesta";
+    }  
+
+    function seleccionar () { 
+        //querySelectorAll 
+        let arrai = document.querySelectorAll("p"); 
+        for (let linea of arrai) {  
+            if (arrai[linea] % 2 == 0) {
+            linea.style.color=red;
+            contador++;  
+            } else if (arrai[linea] % 2 == 1) { 
+            linea.style.color=blue;
+            contador++;   
+            }
+        }
+    } 
+
+    let boton1 = document.querySelector("#crea");
+    let boton2 = document.querySelector("#pinta");
+    boton1.addEventlistener("click" ,creaparrafo());
+    boton2.addEventlistener("click" ,seleccionar());
+
+
+
+</script>
+</html>

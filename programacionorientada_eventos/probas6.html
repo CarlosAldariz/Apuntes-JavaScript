@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xogo dos colores</title> 
+    <style> 
+    .container{ 
+        width:100%; 
+        display:flex; 
+        flex-direction: row;
+    }
+    .div1{ 
+        background: blue;
+         width: 50%; 
+         height: 930px;  
+    } 
+    .div2{ 
+        background: red;
+        width: 50%; 
+        height: 930px ;
+    }
+    </style>
+</head>
+<body>   
+
+    <div class="container">
+        <div class="div2" id="div2" mouseover="colorRojo()" ></div>
+        <div class="div1" id="div1"></div>
+    </div>
+    <script>
+        function colorRojo(){
+            rojo.style.background = "green";
+            azul.style.color = "white";
+            azul.textContent = "raton encima de la primera area";
+        }
+
+         function reset(){
+            rojo.style.background = "red";
+            azul.textContent = "";
+        } 
+    
+        let azul = document.querySelector('#div1') 
+        let rojo = document.querySelector('#div2') 
+        rojo.addEventListener("mouseover", colorRojo) 
+        rojo.addEventListener("mouseout", reset)
+    </script>
+
+
+</body>
+</html>

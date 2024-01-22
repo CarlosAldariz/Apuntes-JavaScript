@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .amarelo {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="boton">restame esta</button>
+    <p id="ocolor"></p>
+    <script>
+      "use strict";
+      let elemento = document.querySelector("#ocolor");
+      let contador = 10;
+      function sumaesta(event) {
+        if (contador == 0) {
+          ocolor.textContent = contador;
+          ocolor.style.color = "red";
+        }
+        contador = contador;
+        contador--;
+        console.log(contador);
+      }
+      let a = document.querySelector("#boton");
+      a.addEventListener("click", sumaesta);
+    </script>
+  </body>
+</html>
