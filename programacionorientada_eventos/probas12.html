@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parrafo rojo, parrafo verde</title> 
+    <style> 
+    </style>
+</head>
+<body> 
+    <button id="boton01">sumalle un</button> 
+    <p id="suma"></p> 
+    <p id="sumapar"></p>
+    <script>  
+     let sumapar = document.querySelector("#sumapar");
+    //crea parrafos pares en verde, impares en rojo
+    let incrementarLista = document.querySelector("#boton01");
+        incrementarLista.addEventListener("click", manej_boton01); 
+
+
+        let contador = 0;
+
+        function manej_boton01() {
+            let nuevoElemento = document.createElement("p");
+            nuevoElemento.textContent = "pares en rojo, impares en verde"; 
+            contador++; 
+            if (contador%2 == 0){  
+            nuevoElemento.style.color="red";
+            sumapar.append(nuevoElemento); 
+            } else { 
+            nuevoElemento.style.color="green";
+            sumapar.append(nuevoElemento);  
+            }
+        } 
+
+    </script>
+</body>
+</html>

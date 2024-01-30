@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sergas</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Asegura que el cuerpo ocupe todo el alto de la ventana */
+    }
+
+    h1 {
+        color: blue;
+        text-align: center;
+    }
+
+    .caixa {
+        background-color: aliceblue;
+        color: aqua;
+        width: 20%;
+        height: 30%;
+        margin: 0 auto; /* Centra horizontalmente la caja */
+        text-align: center;
+        position: relative; /* Establece la posición relativa para el contenido */
+    }
+
+    .login {
+        position: absolute; /* Establece el login como posición absoluta */
+        top: 50%; /* Coloca el login en el centro vertical */
+        left: 50%; /* Coloca el login en el centro horizontal */
+        transform: translate(-50%, -50%); /* Centra el login exactamente en el centro */
+    }
+    </style>
+</head>
+<body>
+    <div class="caixa">
+        <h1> Login </h1>
+        <form class="login">
+            <p><strong> Datos De Identificacion </strong></p> <br>
+            <input type="radio" name="tipo_documento" id="dni" value="DNI/NIF/NIE">
+            <label for="dni">DNI/NIF/NIE</label>
+            <br>
+            <input type="radio" name="tipo_documento" id="pasaporte" value="PASAPORTE">
+            <label for="pasaporte">PASAPORTE</label>
+            <br>
+            <p>Número Documento</p>
+            <input type="text" id="numero">
+            <p>Primeiro Apelido</p>
+            <input type="text" id="apelido">
+            <p>Data de nacemento</p>
+            <input type="date" id="data">
+            <br> <br>
+            <button id="rexistrar">Rexistrar</button>
+        </form>
+    </div>
+</body>
+</html>

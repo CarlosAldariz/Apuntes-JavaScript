@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora</title>
+
+    <style>
+
+        .calculator {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            grid-gap: 10px;
+
+            margin: 0 auto;
+
+            width: 200px;
+
+        }
+
+        .button {
+
+            background-color: #f0f0f0;
+
+            border: none;
+
+            padding: 15px 30px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            display: inline-block;
+
+            font-size: 16px;
+
+            margin: 4px 2px;
+
+            cursor: pointer;
+
+        }
+
+        .button:hover {
+
+            background-color: #ddd;
+
+        }
+
+        .button:active {
+
+            background-color: #ccc;
+
+        }
+
+        .display {
+
+            grid-column: 1 / span 4;
+
+            background-color: #f0f0f0;
+
+            padding: 15px 30px;
+
+            text-align: right;
+
+            font-size: 24px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <div class="display" id="display">0</div>
+
+        <button class="button" onclick="addDigit('7')">7</button>
+
+        <button class="button" onclick="addDigit('8')">8</button>
+
+        <button class="button" onclick="addDigit('9')">9</button>
+
+        <button class="button" onclick="performOperation('/')">/</button>
+
+        <button class="button" onclick="addDigit('4')">4</button>
+
+        <button class="button" onclick="addDigit('5')">5</button>
+
+        <button class="button" onclick="addDigit('6')">6</button>
+
+        <button class="button" onclick="performOperation('*')">*</button>
+
+        <button class="button" onclick="addDigit('1')">1</button>
+
+        <button class="button" onclick="addDigit('2')">2</button>
+
+        <button class="button" onclick="addDigit('3')">3</button>
+
+        <button class="button" onclick="performOperation('-')">-</button>
+
+        <button class="button" onclick="addDigit('0')">0</button>
+
+        <button class="button" onclick="performOperation('.')">.</button>
+
+        <button class="button" onclick="performOperation('+')">+</button>
+
+        <button class="button" onclick="calculateResult()">=</button>
+
+        <button class="button" onclick="clearDisplay()">C</button>
+
+    </div>
+
+    <script>
+
+        let display = document.getElementById('display');
+
+        let operation = '';
+
+        let operand1 = 0;
+
+        let operand2 = null;
+
+
+        function addDigit(digit) {
+
+            display.textContent += digit;
+
+        }
+
+
+        function performOperation(op) {
+
+            if (operation !== '') {
+
+                calculateResult();
+
+            }
+
+            operation = op;
+
+            operand1 = parseFloat(display.textContent);
+
+            display.textContent = '0';
+
+        }
+
+
+        function calculateResult() {
+
+            let result = 0;
+
+            operand2 = parseFloat(display.textContent);
+
+            switch (operation) {
+
+                case '+':
+
+                    result = operand1 + operand2;
+
+                    break;
+
+                case '-':
+
+                    result = operand1 - operand2;
+
+                    break;
+
+                case '*':
+
+                    result = operand1 * operand2;
+
+                    break;
+
+                case '/':
+
+                    result = operand1 / operand2;
+
+                    break;
+
+            }
+
+            display.textContent = result;
+
+            operation = '';
+
+        }

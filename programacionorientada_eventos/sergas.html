@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sergas</title> 
+    <style> 
+    body { 
+        margin: 0; 
+        padding: 0; 
+        background-color:white; 
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    } 
+
+    h1 { 
+        color: blue; 
+        text-align: center; 
+    }
+    .caixa {  
+        background-color: aliceblue;
+        color: aqua;
+        width: 20%;
+        height: 40%;
+        margin: 0 auto; /* Centra horizontalmente la caja */
+        text-align: center;
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%)
+    }
+    </style>
+</head>
+<body> 
+        <h1> Login </h1>
+        <form class="caixa">
+    <p><strong><h2> Datos De Identificacion </h2></strong></p> <br>
+    <input type="radio" name="tipo_documento" id="nonseieu" value="DNI/NIF/NIE">
+    <label for="dni">DNI/NIF/NIE</label>
+    <br>
+    <input type="radio" name="tipo_documento" id="pasaporte" value="PASAPORTE">
+    <label for="pasaporte">PASAPORTE</label> 
+        <p>Número Documento</p>
+        <input type="text" id="dni"> 
+        <p>Primeiro Apelido</p>
+        <input type="text" id="apelido"> 
+        <p>Data de nacemento</p> 
+        <input type="date" id="data"> <br> <br>
+        <button id="rexistrar">Rexistrar</button> 
+        </form>   
+        <div id="aquiescribes"></div> 
+         <div id="aquiescribes1"></div> 
+         <div id="aquiescribes2"></div>
+    
+    <script> 
+    
+    
+  let button = document.querySelector("#rexistrar")
+        button.addEventListener("click", botondni);
+
+    let apelido = document.querySelector("#apelido") 
+
+        
+   
+      
+      function botondni() {
+        let dni = document.querySelector("#dni").value;
+        let apelido = document.querySelector("#apelido").value;
+        let data = document.querySelector("#data").value;
+        let datos = document.querySelector("#aquiescribes"); 
+        let datos1 = document.querySelector("#aquiescribes1"); 
+        let datos2 = document.querySelector("#aquiescribes2");
+
+        // document.write(dni.value); 
+        // document.write(apelido.value); 
+        // document.write(data.value); 
+  
+        let expresion = /^[0-9]{8}[A-Z]{1}$/;
+
+         if (expresion.test(dni) == true) {
+            datos.textContent = dni;
+         } else {
+             datos.textContent = "¡Pero qué p*** dni es ese?";
+        }
+
+        let apelidovai = /^[A-Za-z]{1}$/i;
+
+        if (apelidovai.test(apelido) == true) {
+            datos1.textContent = apelido;
+        } else if (apelidovai.test(apelido) == false) {
+            datos1.textContent = "¡No va fino el apellido ese, you!";
+        }
+
+        if (data.value === "dd/mm/aaaa") {
+            datos2.textContent = "¡No va fino, esa fecha es chunga!";
+        } else {
+            datos2.textContent = data;
+        }
+    }
+    </script>       
+</body>
+</html> 
+
+<!-- DISABLED en html bloquea un camp -->

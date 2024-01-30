@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <br><img src="polli1.jpg" alt="poliño pequeno" width="300px" height="300px" id="poli1"> 
+    <br><img src="polli2.webp" alt="poliño amarelo" width="300px" height="300px" id="poli2">  
+    <br><img src="polli3.jpg" alt="minipoliño" width="300px" height="300px" id="poli3">  
+    <br><img src="polli4.jpg" alt="poliños" width="300px" height="300px" id="poli4">   
+    <br><img src="polli5.jpg" alt="pio pio" width="300px" height="300px" id="poli5">   
+    <br><img src="polli6.jpg" alt="futuro nugget" width="300px" height="300px" id="poli6"> 
+    
+    <div id ="textual"></div> 
+
+        <script>
+    let poli1 = document.querySelector("#poli1") 
+    poli1.addEventListener("click", poliun) 
+
+    let poli2 = document.querySelector("#poli2") 
+    poli2.addEventListener("click", polidous) 
+
+    let poli3 = document.querySelector("#poli3") 
+    poli3.addEventListener("click", politres) 
+
+    let poli4 = document.querySelector("#poli4") 
+    poli4.addEventListener("click", policatro) 
+
+    let poli5 = document.querySelector("#poli5") 
+    poli5.addEventListener("click", policinco) 
+
+    let poli6 = document.querySelector("#poli6") 
+    poli6.addEventListener("click", poliseis)
+
+    let textual = document.querySelector("#textual")  
+
+    function poliun() { 
+        textual.textContent = "poli1";
+    } 
+
+    function polidous() { 
+        textual.textContent = "poli2";
+    } 
+
+    function politres() { 
+        textual.textContent = "poli3";
+    } 
+
+    function policatro() { 
+        textual.textContent = "poli4";
+    } 
+
+    function policinco() { 
+        textual.textContent = "poli5";
+    } 
+
+    function poliseis() { 
+        textual.textContent = "poli6";
+    }
+
+    </script>
+
+
+
+
+
+</body>
+</html>

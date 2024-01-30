@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <button id="boton01">Incrementar lista</button>
+    <button id="boton02">Borrar ultimo elemento</button>  
+    <button id="boton03">Inserta texto </button>
+    <ol id="listaOrdenada"></ol>
+    <script>
+        /* Tenemos un segundo botón que sirva para borrar elementos da lista, cada vez que o pulsemos,
+        eliminara o último elemento da lista
+        1. 1
+        2. 2 */
+
+
+        let lista = document.queryselector("#listaOrdenada");
+        
+        let contador = 1;
+        let incrementarLista = document.querySelector("#boton01");
+        incrementarLista.addEventListener("click", manej_boton01);
+
+
+        let borrarUltimaLista = document.querySelector("#boton02");
+        borrarUltimaLista.addEventListener("click", manej_boton02); 
+
+        let aniadirtexto = document.querySelector("#boton03"); 
+        aniadirtexto.addEventListener("click", manej_boton03); 
+
+
+        function manej_boton01() {
+            let nuevoElemento = document.createElement("li");
+            nuevoElemento.textContent = contador;
+            listaOrdenada.append(nuevoElemento);
+            contador++;
+        }
+
+
+        function manej_boton02() {
+            let lista = document.querySelectorAll("ol li"); // Obtener la lista
+
+            if (lista.length > 0) {
+                let ultimoElemento = lista[lista.length - 1]; // Obtener el último elemento
+                ultimoElemento.remove();
+            }
+
+        } 
+
+        function manej_boton03() { 
+            let li = createElement("li");
+            let texto = prompt("introduce tu texto"); 
+            listaOrdenada.append(texto);
+        }
+
+
+    </script>
+</body>
+
+
+</html>

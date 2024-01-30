@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNI form</title>
+</head> 
+<style> 
+    #vabenne { 
+        color:blue; 
+    } 
+
+    #vamale { 
+        color: red;
+    }
+
+</style>
+<body> 
+    <button id="botonaso">tu dni vafino?</button> 
+    <h1><div id="vabenne"></div></h1>
+    <h1><div id="vamale"></div> </h1>
+    <input type="text" name="dni" id="dni">
+    <script> 
+    
+    let vabenne = document.querySelector("#vabenne"); 
+    let vamale = document.querySelector("#vamale"); 
+
+    let comeva = document.querySelector("#botonaso")
+        comeva.addEventListener("click", botonaso);
+
+    let dni = document.querySelector("#dni")
+      
+    let expresion = /^[0-9]{8}[A-Z]{1}$/i;
+    
+    function botonaso (){
+    if (expresion.test(dni.value) == true) { 
+        vabenne.textContent = "Uuuuuh sabes escribir un dni, enorabuena"
+    } else if (expresion.test(dni.value) == false) { 
+       vamale.textContent = "non sabes nin poñer o dni"
+    } 
+}
+
+    </script>
+</body>
+</html>
